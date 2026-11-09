@@ -456,7 +456,7 @@ function AnimalCard({ animal, onAdopt }: AnimalCardProps) {
 
         <button
           onClick={() => onAdopt(animal)}
-          className="mt-auto w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold py-2.5 rounded-xl shadow hover:shadow-md transition-all text-sm flex items-center justify-center gap-2"
+          className="mt-auto w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-2.5 rounded-xl shadow hover:shadow-md transition-all text-sm flex items-center justify-center gap-2"
         >
           <Heart size={15} />
           Adopt Me
@@ -510,7 +510,7 @@ export default function AdoptionPage() {
             onClick={() => setActiveTab('adopt')}
             className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
               activeTab === 'adopt'
-                ? 'bg-orange-500 text-white shadow-md shadow-orange-200'
+                ? 'bg-blue-600 text-white shadow-md shadow-blue-200'
                 : 'text-gray-600 hover:bg-gray-100'
             }`}
           >
@@ -535,14 +535,14 @@ export default function AdoptionPage() {
       {activeTab === 'adopt' && (
         <div>
           {/* Hero */}
-          <div className="bg-gradient-to-br from-orange-50 via-pink-50 to-white py-14 px-4 sm:px-6">
+          <div className="bg-gradient-to-br from-blue-50 via-sky-50 to-white py-14 px-4 sm:px-6">
             <div className="max-w-6xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 text-sm font-semibold px-4 py-2 rounded-full mb-5">
-                <Heart size={16} className="fill-orange-400 text-orange-400" />
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-2 rounded-full mb-5">
+                <Heart size={16} className="fill-blue-500 text-blue-500" />
                 Animals Looking for Homes
               </div>
               <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-                Find Your New <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500">Best Friend.</span>
+                Find Your New <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Best Friend.</span>
               </h1>
               <p className="text-lg text-gray-600 max-w-xl mx-auto">
                 Give an abandoned animal the chance to experience a loving home.
@@ -709,7 +709,7 @@ export default function AdoptionPage() {
               <div>
                 <h4 className="font-bold text-amber-800 mb-1">Important</h4>
                 <p className="text-sm text-amber-700 leading-relaxed">
-                  End-of-life decisions are made exclusively by qualified veterinary professionals following a thorough assessment. PawLink connects you with experienced veterinarians who will guide you through available options compassionately and ethically.
+                  End-of-life decisions are made exclusively by qualified veterinary professionals following a thorough assessment. Petopia connects you with experienced veterinarians who will guide you through available options compassionately and ethically.
                 </p>
               </div>
             </div>

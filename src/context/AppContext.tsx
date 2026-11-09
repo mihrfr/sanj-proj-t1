@@ -143,7 +143,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   // Load from localStorage on mount
   useEffect(() => {
     try {
-      const saved = localStorage.getItem('pawlink-state');
+      const saved = localStorage.getItem('petopia-state') || localStorage.getItem('pawlink-state');
       if (saved) {
         const parsed = JSON.parse(saved);
         dispatch({ type: 'LOAD_STATE', payload: { ...defaultState, ...parsed } });
@@ -153,7 +153,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   // Save to localStorage on state changes
   useEffect(() => {
-    localStorage.setItem('pawlink-state', JSON.stringify(state));
+    localStorage.setItem('petopia-state', JSON.stringify(state));
   }, [state]);
 
   return (

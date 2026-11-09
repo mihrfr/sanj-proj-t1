@@ -42,8 +42,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 bg-green-700 rounded-xl flex items-center justify-center group-hover:bg-green-800 transition-colors">
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-700 transition-colors shadow-sm">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
                 <path d="M12 2C10.5 2 9.5 3.5 9.5 5C9.5 6.5 10.5 8 12 8C13.5 8 14.5 6.5 14.5 5C14.5 3.5 13.5 2 12 2Z"/>
                 <path d="M6 5C4.5 5 3.5 6 3.5 7.5C3.5 9 4.5 10 6 10C7.5 10 8.5 9 8.5 7.5C8.5 6 7.5 5 6 5Z"/>
@@ -53,7 +53,9 @@ export default function Navbar() {
                 <path d="M12 10C8.5 10 5.5 12 5.5 15.5C5.5 18.5 7.5 22 12 22C16.5 22 18.5 18.5 18.5 15.5C18.5 12 15.5 10 12 10Z"/>
               </svg>
             </div>
-            <span className="text-xl font-bold text-green-800">PawLink</span>
+            <span className="text-xl font-black text-slate-900 tracking-tight flex items-center">
+              Pet<span className="text-blue-600">opia</span>
+            </span>
           </Link>
 
           {/* Desktop nav */}
@@ -65,7 +67,7 @@ export default function Navbar() {
                   to={link.path}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
                     isActive(link.path)
-                      ? 'bg-red-600 text-white'
+                      ? 'bg-red-600 text-white shadow-sm'
                       : 'bg-red-50 text-red-600 hover:bg-red-600 hover:text-white'
                   }`}
                 >
@@ -78,8 +80,8 @@ export default function Navbar() {
                   to={link.path}
                   className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                     isActive(link.path)
-                      ? 'bg-green-50 text-green-700 font-semibold'
-                      : 'text-gray-600 hover:text-green-700 hover:bg-green-50'
+                      ? 'bg-blue-50 text-blue-700 font-semibold'
+                      : 'text-slate-600 hover:text-blue-600 hover:bg-blue-50/70'
                   }`}
                 >
                   {link.label}
@@ -88,7 +90,8 @@ export default function Navbar() {
             ))}
             <button
               onClick={() => navigate('/dashboard')}
-              className="relative ml-2 p-2 rounded-xl text-gray-600 hover:text-green-700 hover:bg-green-50 transition-all"
+              aria-label="View notifications"
+              className="relative ml-2 p-2 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all"
             >
               <Bell size={20} />
               {unreadCount > 0 && (
@@ -103,7 +106,8 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={() => navigate('/dashboard')}
-              className="relative p-2 rounded-xl text-gray-600 hover:text-green-700 hover:bg-green-50 transition-all"
+              aria-label="View notifications"
+              className="relative p-2 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all"
             >
               <Bell size={20} />
               {unreadCount > 0 && (
@@ -114,7 +118,8 @@ export default function Navbar() {
             </button>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 rounded-xl text-gray-600 hover:bg-gray-100 transition-all"
+              aria-label="Toggle navigation menu"
+              className="p-2 rounded-xl text-slate-600 hover:bg-slate-100 transition-all"
             >
               {menuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -124,7 +129,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg animate-fade-in">
+        <div className="md:hidden bg-white border-t border-slate-100 shadow-lg animate-fade-in">
           <div className="px-4 py-3 space-y-1">
             {navLinks.map(link => (
               <Link
@@ -136,8 +141,8 @@ export default function Navbar() {
                       ? 'bg-red-600 text-white'
                       : 'bg-red-50 text-red-600 font-semibold'
                     : isActive(link.path)
-                    ? 'bg-green-50 text-green-700 font-semibold'
-                    : 'text-gray-600 hover:bg-gray-50'
+                    ? 'bg-blue-50 text-blue-700 font-semibold'
+                    : 'text-slate-600 hover:bg-slate-50'
                 }`}
               >
                 {link.emergency && '🚨 '}{link.label}

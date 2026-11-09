@@ -212,21 +212,21 @@ function OrgModal({
               href={`tel:${org.phone}`}
               className="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 hover:bg-gray-100 rounded-xl px-3 py-2.5 transition-colors"
             >
-              <Phone size={14} className="text-teal-600 flex-shrink-0" />
+              <Phone size={14} className="text-blue-600 flex-shrink-0" />
               <span className="truncate">{org.phone}</span>
             </a>
             <a
               href={`mailto:${org.email}`}
               className="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 hover:bg-gray-100 rounded-xl px-3 py-2.5 transition-colors"
             >
-              <Mail size={14} className="text-teal-600 flex-shrink-0" />
+              <Mail size={14} className="text-blue-600 flex-shrink-0" />
               <span className="truncate">{org.email}</span>
             </a>
           </div>
 
           <div className="pt-2">
             {connected ? (
-              <div className="flex items-center justify-center gap-2 py-3 bg-green-50 border border-green-200 rounded-2xl text-green-700 font-semibold text-sm">
+              <div className="flex items-center justify-center gap-2 py-3 bg-blue-50 border border-blue-200 rounded-2xl text-blue-700 font-semibold text-sm">
                 <CheckCircle size={16} />
                 Connected
               </div>
@@ -236,7 +236,7 @@ function OrgModal({
                   onConnect();
                   onClose();
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-semibold rounded-2xl transition-all shadow-sm hover:shadow-md"
+                className="w-full flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-2xl transition-all shadow-sm hover:shadow-md"
               >
                 <Network size={16} />
                 Connect with {TYPE_LABEL[org.type]}
@@ -331,9 +331,9 @@ function OrgCard({
         {/* Phone */}
         <a
           href={`tel:${org.phone}`}
-          className="flex items-center gap-2 text-sm text-gray-600 hover:text-teal-600 transition-colors"
+          className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
         >
-          <Phone size={13} className="text-teal-500 flex-shrink-0" />
+          <Phone size={13} className="text-blue-500 flex-shrink-0" />
           {org.phone}
         </a>
 
@@ -348,14 +348,14 @@ function OrgCard({
           </button>
 
           {connected ? (
-            <div className="flex items-center gap-1.5 text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-xl px-3 py-2">
+            <div className="flex items-center gap-1.5 text-sm font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-xl px-3 py-2">
               <CheckCircle size={14} />
               Connected
             </div>
           ) : (
             <button
               onClick={onConnect}
-              className="flex-1 flex items-center justify-center gap-1.5 text-sm font-semibold text-white bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 rounded-xl py-2 transition-all shadow-sm"
+              className="flex-1 flex items-center justify-center gap-1.5 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-xl py-2 transition-all shadow-sm"
             >
               <Network size={14} />
               Connect
@@ -378,11 +378,11 @@ const FLOW_STEPS = [
     text: 'text-teal-700',
   },
   {
-    icon: <Network size={22} className="text-indigo-600" />,
-    label: 'PawLink Central',
-    sub: 'AI triages & routes',
-    color: 'bg-indigo-50 border-indigo-200',
-    text: 'text-indigo-700',
+    icon: <Network size={22} className="text-blue-600" />,
+    label: 'Petopia Central',
+    sub: 'Triages & matches nearest team',
+    color: 'bg-blue-50 border-blue-200',
+    text: 'text-blue-700',
   },
   {
     icon: <Shield size={22} className="text-orange-600" />,
@@ -527,7 +527,7 @@ export default function RescueNetworkPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* ── Hero Header ── */}
-      <div className="bg-gradient-to-br from-teal-600 via-emerald-600 to-cyan-700 text-white py-16 px-4">
+      <div className="bg-gradient-to-br from-blue-700 via-sky-600 to-indigo-800 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 rounded-full px-4 py-1.5 text-sm font-medium mb-5">
             <Network size={14} />
@@ -535,9 +535,9 @@ export default function RescueNetworkPage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
             One Network.{' '}
-            <span className="text-yellow-300">Thousands of Helping Hands.</span>
+            <span className="text-sky-200">Thousands of Helping Hands.</span>
           </h1>
-          <p className="mt-4 text-teal-100 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-sky-100 text-lg max-w-2xl mx-auto">
             Discover shelters, rescue teams, and veterinary clinics across Hyderabad — all
             working together so no animal is left behind.
           </p>
@@ -552,7 +552,7 @@ export default function RescueNetworkPage() {
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <p className="text-3xl font-black">{s.n}</p>
-                <p className="text-teal-200 text-sm">{s.label}</p>
+                <p className="text-sky-200 text-sm">{s.label}</p>
               </div>
             ))}
           </div>
@@ -573,7 +573,7 @@ export default function RescueNetworkPage() {
               placeholder="Search by name or location…"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition"
+              className="w-full pl-10 pr-4 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
             />
           </div>
 
@@ -581,7 +581,8 @@ export default function RescueNetworkPage() {
           <select
             value={availFilter}
             onChange={(e) => setAvailFilter(e.target.value as FilterAvail)}
-            className="text-sm bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-teal-400 cursor-pointer"
+            aria-label="Filter by availability"
+            className="text-sm bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
           >
             {AVAIL_FILTERS.map((f) => (
               <option key={f.value} value={f.value}>
@@ -601,8 +602,8 @@ export default function RescueNetworkPage() {
               onClick={() => setTypeFilter(f.value)}
               className={`px-4 py-2 rounded-xl text-sm font-semibold border transition-all ${
                 typeFilter === f.value
-                  ? 'bg-teal-600 text-white border-teal-600 shadow-sm'
-                  : 'bg-white text-gray-600 border-gray-200 hover:border-teal-400 hover:text-teal-600'
+                  ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
+                  : 'bg-white text-gray-600 border-gray-200 hover:border-blue-400 hover:text-blue-600'
               }`}
             >
               {f.label}
