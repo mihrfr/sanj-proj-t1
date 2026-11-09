@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Heart, Phone, Mail, MapPin, Globe, Share2, MessageCircle, Shield } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -73,17 +73,17 @@ export default function Footer() {
               </li>
             </ul>
             <div className="flex items-center gap-3 mt-5">
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
-                <Facebook size={14} />
+              <a href="#" aria-label="Website" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                <Globe size={14} />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
-                <Twitter size={14} />
+              <a href="#" aria-label="Community" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                <MessageCircle size={14} />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
-                <Instagram size={14} />
+              <a href="#" aria-label="Share" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                <Share2 size={14} />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
-                <Youtube size={14} />
+              <a href="#" aria-label="Welfare Trust" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                <Shield size={14} />
               </a>
             </div>
           </div>
